@@ -13,7 +13,7 @@ public class WordCountTest {
 	@Test
 	public void testWordCountFromFile() throws IOException {
 		wordCount = new WordCount();
-		assertEquals(18,wordCount.count());
+		assertEquals(20,wordCount.count());
 	}
 
 	

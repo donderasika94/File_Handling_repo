@@ -8,16 +8,13 @@ public class WordCount {
 	public int count() throws IOException {
 		FileReader fileReader = new FileReader ("C:\\RasikaD\\Core java\\basic_assignments\\src\\basic_assignments\\HelloWorld.java");        
 	       BufferedReader bufferedReader = new BufferedReader (fileReader);     
-	       String line = bufferedReader.readLine ();
+	       String line ;
 	       int count = 0;
-	       while (line != null) {
-	          String []parts = line.split(" ");
-	          for( String word : parts)
-	          {
-	            count++;        
-	          }
-	          line = bufferedReader.readLine();
-	       }    
+	       while ((line= bufferedReader.readLine ()) != null) {
+	          String[] words = line.split("\\s+");
+	          count = count+words.length;
+	       }   
+	       fileReader.close();
 	       return count;
 	}
 

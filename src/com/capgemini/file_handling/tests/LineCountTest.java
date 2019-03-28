@@ -14,8 +14,7 @@ public class LineCountTest {
 	@Test
 	public void testLineCountFiles() throws IOException {
 		lineCount = new LineCount();
-		assertEquals(8,lineCount.count());
-	
+		assertEquals(8,lineCount.count());	
 	}
 
 	
